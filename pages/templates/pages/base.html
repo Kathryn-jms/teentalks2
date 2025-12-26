@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Teen Talks{% endblock %}</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #d9a7c7, #fffcdc);
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        header h2 {
+            color: white;
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #2575fc;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #333;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h2>Teen Talks</h2>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'topic_list' %}">Topics</a>
+        <a href="{% url 'tips_list' %}">Tips</a>
+    </nav>
+</header>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+<footer>
+    Teen Talks © 2025 — Inspire. Educate. Grow.
+</footer>
+
+</body>
+</html>

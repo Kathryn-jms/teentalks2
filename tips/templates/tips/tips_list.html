@@ -1,0 +1,21 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Teen Tips | Teen Talks{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <h1 class="mb-4">Teen Tips</h1>
+
+    {% for tip in tips %}
+        <div class="card shadow-sm rounded-3 mb-4 p-4">
+            <h3 class="card-title">{{ tip.title }}</h3>
+            <p class="card-text">{{ tip.content|truncatewords:40 }}</p>
+            <a href="{% url 'tip_detail' tip.id %}" class="btn btn-primary mt-2">Read More</a>
+        </div>
+    {% empty %}
+        <p class="text-muted">No tips available yet.</p>
+    {% endfor %}
+
+</div>
+{% endblock %}

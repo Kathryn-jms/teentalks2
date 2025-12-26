@@ -1,0 +1,30 @@
+{% extends "pages/base.html" %}
+
+{% block title %}All Topics | Teen Talks{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">All Topics</h2>
+
+    <div class="row">
+        {% for topic in topics %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                {% if topic.image_url %}
+                <img src="{{ topic.item_url }}" class="card-img-top" style="height: 180px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ topic.title }}</h5>
+                    <p class="text-muted small">{{ topic.description|truncatechars:80 }}</p>
+                    <a href="{% url 'topic_detail' topic.id %}" class="btn btn-primary btn-sm">Read More →</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No topics available yet.</p>
+        {% endfor %}
+    
+
+    </div>
+</div>
+{% endblock %}
