@@ -1,5 +1,5 @@
 TEENTALK
-Teentalk is a web-based platform that provides teenagers with topics, guidance, and practical tips on how to deal with the transitional period of adolescence.
+is a web-based platform that provides teenagers with topics, guidance, and practical tips on how to deal with the transitional period of adolescence.
 The system is designed to create a safe digital space where teens can learn, share experiences, and access supportive discussions that help them navigate emotional, social, and psychological changes during their growth journey.
 
 📌 Purpose of the Platform
