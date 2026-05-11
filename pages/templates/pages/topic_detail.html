@@ -72,7 +72,7 @@
 
     <a href="{% url 'topic_list' %}" class="btn btn-outline-secondary mb-4">← Back to Topics</a>
 
-    <!-- ✅ HERO IMAGE (SAFE VERSION) -->
+    
     <div class="hero">
         {% if topic.image %}
             <img src="{{ topic.image.url }}" alt="{{ topic.title }}" style="width:100%; border-radius:10px;">
@@ -84,7 +84,7 @@
         <h1 class="hero-title">{{ topic.title }}</h1>
     </div>
 
-    <!-- ✅ MAIN CONTENT -->
+   
     <div class="glass-card">
         <h3 class="section-title">About This Topic</h3>
         <p style="line-height: 1.8;">
@@ -92,7 +92,6 @@
         </p>
     </div>
 
-    <!-- ✅ KEY POINTS -->
     {% if topic.key_points %}
     <div class="glass-card">
         <h3 class="section-title">Key Takeaways</h3>
@@ -106,7 +105,6 @@
     
 
 
-    <!-- ✅ RELATED TOPICS (SAFE VERSION) -->
     {% if related_topics %}
     <div class="glass-card">
         <h3 class="section-title">Related Topics</h3>
